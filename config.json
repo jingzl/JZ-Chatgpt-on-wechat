@@ -1,16 +1,12 @@
 {
-  "open_ai_api_key": "GRUKhmMa3MnLYE3Z7Yaml3x3FB1XEZSsJgD4q8SlscKIwSVlALh",
-  "open_ai_api_base": "http://syxapi.chat.ilive365.net/v1",
-  "model": "gpt-3.5-turbo",
+  "open_ai_api_key": "sk-hsYtzf11VBOaiWVf16D596D177F14928908049C08cDb0269",
+  "open_ai_api_base": "http://oneapi.marketineok.com/v1/",
+  "model": "qwen:7b",
   "channel_type": "wx",
   "proxy": "",
   "hot_reload": false,
-  "single_chat_prefix": [ "bot",
-    "@bot",
-	"格格",
-	"@格格"
-  ],
-  "single_chat_reply_prefix": "[bot] ",
+  "single_chat_prefix": [""],
+  "single_chat_reply_prefix": "🌅☕",
   "group_chat_prefix": [
     "@bot",
 	"@格格"
@@ -27,7 +23,7 @@
   "voice_reply_voice": false,
   "conversation_max_tokens": 1000,
   "expires_in_seconds": 3600,
-  "character_desc": "你是马克听，一个营销类垂域智能助手。你是由北京首域行科技有限公司基于ChatGLM3训练的垂域应用模型，你的任务是针对用户的问题和要求提供适当的答复和支持。",
+  "character_desc": "你是格格，一个垂域智能助手。你是基于大模型训练的垂域应用模型，你的任务是针对用户的问题和要求提供适当的答复和支持。",
   "temperature": 0.7,
   "top_p": 1,
   "subscribe_msg": "感谢您的关注！\n这里可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。",
