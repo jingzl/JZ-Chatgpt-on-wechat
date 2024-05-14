@@ -4,7 +4,6 @@ import threading
 import time
 from asyncio import CancelledError
 from concurrent.futures import Future, ThreadPoolExecutor
-from concurrent import futures
 
 from bridge.context import *
 from bridge.reply import *
@@ -75,6 +74,7 @@ class ChatChannel(Channel):
                     ):
                         session_id = group_id
                 else:
+                    logger.debug(f"No need reply, groupName not in whitelist, group_name={group_name}")
                     return None
                 context["session_id"] = session_id
                 context["receiver"] = group_id
@@ -170,11 +170,13 @@ class ChatChannel(Channel):
         reply = self._generate_reply(context)
 
         logger.debug("[WX] ready to decorate reply: {}".format(reply))
-        # reply的包装步骤
-        reply = self._decorate_reply(context, reply)
 
-        # reply的发送步骤
-        self._send_reply(context, reply)
+        # reply的包装步骤
+        if reply and reply.content:
+            reply = self._decorate_reply(context, reply)
+
+            # reply的发送步骤
+            self._send_reply(context, reply)
 
     def _generate_reply(self, context: Context, reply: Reply = Reply()) -> Reply:
         e_context = PluginManager().emit_event(
