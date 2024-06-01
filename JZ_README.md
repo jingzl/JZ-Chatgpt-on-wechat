@@ -6,7 +6,21 @@
 ## 版本说明
 沿用源仓库的版本号，增加最后的日期域。
 
+目前的模型采用oneapi提供的服务接口，支持：
+- jack/llama3-8b-chinese:latest
+- qwen:14b
+- qwen:7b
+
+### 运行
+- 后台启动：nohup python3 app.py & tail -f nohup.out 
+- 退出：ps -ef | grep app.py | grep -v grep，然后 kill -9 xxxx
+
+## 升级事项
+- timetask插件的文件迁移：plugins/timetask/taskFile/timeTask.xlsx
+
 ## 更新日志
+
+>**[24/6/1]：** [1.6.5.240601]同步更新源仓库，更新代码。
 
 >**[24/5/14]：** [1.6.0.240514]添加定时任务插件 timetask。
 
