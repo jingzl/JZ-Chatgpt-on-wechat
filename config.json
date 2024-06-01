@@ -1,7 +1,7 @@
 {
   "open_ai_api_key": "sk-hsYtzf11VBOaiWVf16D596D177F14928908049C08cDb0269",
   "open_ai_api_base": "http://oneapi.marketineok.com/v1/",
-  "model": "qwen:7b",
+  "model": "qwen:14b",
   "channel_type": "wx",
   "proxy": "",
   "hot_reload": false,
@@ -18,10 +18,10 @@
   "image_create_prefix": [
     "画"
   ],
-  "speech_recognition": false,
+  "speech_recognition": true,
   "group_speech_recognition": false,
   "voice_reply_voice": false,
-  "conversation_max_tokens": 1000,
+  "conversation_max_tokens": 2500,
   "expires_in_seconds": 3600,
   "character_desc": "你是格格，一个垂域智能助手。你是基于大模型训练的垂域应用模型，你的任务是针对用户的问题和要求提供适当的答复和支持。",
   "temperature": 0.7,
