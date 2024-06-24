@@ -12,13 +12,15 @@
 - qwen:7b
 
 ### 运行
-- 后台启动：nohup python3 app.py & tail -f nohup.out 
+- 后台启动：nohup python3 app.py & tail -f nohup.out
 - 退出：ps -ef | grep app.py | grep -v grep，然后 kill -9 xxxx
 
 ## 升级事项
 - timetask插件的文件迁移：plugins/timetask/taskFile/timeTask.xlsx
 
 ## 更新日志
+
+>**[24/6/24]：** [1.6.7.240624]同步更新源仓库，更新代码。
 
 >**[24/6/14]：** [1.6.6.240614]同步更新源仓库，更新代码。
 
